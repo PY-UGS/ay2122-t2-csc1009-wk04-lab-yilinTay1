@@ -5,10 +5,13 @@ public class BMI{ //public-can be called by another class
     private double weight; //private-protect well the internal data
     private double height; //private-protect well the internal data
     private double calculatedBMI; //private-protect well the internal data
+    
+    final static double INCH_TO_METER = 0.0254;
+    final static double POUNDS_TO_KG = 0.45359237;
 
     public BMI(double weight, double height){ //constructor to streamline the programming code
-        this.height = height*0.0254;
-        this.weight = weight*0.45359237;
+        this.height = height*INCH_TO_METER;
+        this.weight = weight*POUNDS_TO_KG;
     }
 
     public double getWeight(){ //open up certain methods for access
@@ -20,11 +23,11 @@ public class BMI{ //public-can be called by another class
     }
 
     public void setHeight(double height){ //open up certain methods for access
-        this.height = height*0.0254;
+        this.height = height*INCH_TO_METER;
     }
 
     public void setWeight(double weight){ //open up certain methods for access 
-        this.weight = weight*0.45359237;
+        this.weight = weight*POUNDS_TO_KG;
     }
 
     public double calculateBMI(){ 
